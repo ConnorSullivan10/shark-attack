@@ -3,31 +3,31 @@ const students = [
     id: 'student1',
     firstName: 'Connor',
     lastName: 'Sullivan',
-    isDead: true,
+    isDead: false,
   },
   {
     id: 'student2',
     firstName: 'Alesha',
     lastName: 'Reed',
-    isDead: true,
+    isDead: false,
   },
   {
     id: 'student3',
     firstName: 'Ashley',
     lastName: 'Claiborne',
-    isDead: true,
+    isDead: false,
   },
   {
     id: 'student4',
     firstName: 'Charity',
     lastName: 'Bunyon',
-    isDead: true,
+    isDead: false,
   },
   {
     id: 'student5',
     firstName: 'Crystal',
     lastName: 'Broach',
-    isDead: true,
+    isDead: false,
   },
   {
     id: 'student6',
@@ -149,28 +149,19 @@ const livingStudents = () => {
       liveStudents.push(student);
     }
   });
-  console.log(liveStudents);
   return liveStudents;
 };
 
-livingStudents();
-
-
 const dearlyBeloved = () => {
   const allStudents = getStudents();
-  console.log(allStudents);
   const deadStudents = [];
   allStudents.forEach((student) => {
     if (student.isDead === true) {
       deadStudents.push(student);
     }
   });
-  console.log(deadStudents);
   return deadStudents;
 };
-
-dearlyBeloved();
-
 
 const followTheLight = (studentId) => {
   students.forEach((response) => {
