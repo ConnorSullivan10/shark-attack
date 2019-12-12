@@ -17,11 +17,13 @@ class App extends React.Component {
     this.setState({ deadStudents, livingStudents });
   }
 
-  sharkAttack = (studentId) => {
-    const livingStudents = studentData.livingStudents();
+  sharkAttack = () => {
+    let livingStudents = studentData.livingStudents();
     const randStudent = livingStudents[Math.floor(Math.random() * livingStudents.length)];
-    studentData.followTheLight(randStudent);
+    const randStudentId = randStudent.id;
+    studentData.followTheLight(randStudentId);
     const deadStudents = studentData.dearlyBeloved();
+    livingStudents = studentData.livingStudents();
     this.setState({ deadStudents, livingStudents });
   }
 

@@ -164,11 +164,8 @@ const dearlyBeloved = () => {
 };
 
 const followTheLight = (studentId) => {
-  students.forEach((response) => {
-    if (response.id === studentId) {
-      response.isDead = true;
-    }
-  });
+  const studentIndex = students.findIndex((student) => student.id === studentId);
+  students[studentIndex].isDead = true;
 };
 
 export default {
