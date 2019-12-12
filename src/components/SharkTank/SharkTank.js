@@ -5,15 +5,22 @@ import studentShape from '../../helpers/props/studentShape';
 
 class SharkTank extends React.Component {
   static propTypes = {
-    liveStudents: PropTypes.arrayOf(studentShape.studentShape),
+    livingStudents: PropTypes.arrayOf(studentShape.studentShape),
+    sharkAttack: PropTypes.func,
+  }
+
+  sharkAttackEvent = (e) => {
+    const { sharkAttack } = this.props;
+    e.preventDefault();
+    sharkAttack();
   }
 
   render() {
-    const myLiveStudents = this.props.liveStudents;
-    const liveStudentCards = myLiveStudents.map((student) => <LiveStudent key={student.id} student={student}/>);
+    const myLiveStudents = this.props.livingStudents;
+    const liveStudentCards = myLiveStudents.map((liveStudent) => <LiveStudent key={liveStudent.id} liveStudent={liveStudent}/>);
     return (
       <div className="sharkTank">
-        <button className="btn btn-success">SHARK ATTACK</button>
+        <button className="btn btn-danger" onClick={this.sharkAttackEvent}>SHARK ATTACK</button>
         {liveStudentCards}
       </div>
     );

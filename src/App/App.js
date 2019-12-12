@@ -29,8 +29,8 @@ class App extends React.Component {
     return (
       <div className="App">
           <button className="btn btn-success">Sharks on sharks</button>
-          <SharkTank livingStudents={this.state.livingStudents}/>
-          <Graveyard deadStudents={this.state.deadStudents} sharkAttack={this.sharkAttack}/>
+          <SharkTank livingStudents={this.state.livingStudents} sharkAttack={this.sharkAttack}/>
+          <Graveyard deadStudents={this.state.deadStudents} />
       </div>
     );
   }
