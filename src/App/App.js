@@ -5,32 +5,31 @@ import './App.scss';
 
 class App extends React.Component {
   state = {
-    students: [],
+    livingStudents: [],
+    deadStudents: [],
   }
 
   componentDidMount() {
-    let students = studentData.livingStudents();
-    this.setState({ students });
-    students = studentData.dearlyBeloved();
-    this.setState({ students });
+    const livingStudents = studentData.livingStudents();
+    const deadStudents = studentData.dearlyBeloved();
+    this.setState({ deadStudents, livingStudents });
   }
 
   aliveStudent = () => {
-    const students = studentData.livingStudents();
-    this.setState({ students });
+    const livingStudents = studentData.livingStudents();
+    this.setState({ livingStudents });
   }
 
   deadStudent = () => {
-    const students = studentData.dearlyBeloved();
-    this.setState({ students });
+    const deadStudents = studentData.dearlyBeloved();
+    this.setState({ deadStudents });
   }
 
   studentKiller = (studentId) => {
     studentData.followTheLight(studentId);
-    let students = studentData.livingStudents();
-    this.setState({ students });
-    students = studentData.dearlyBeloved();
-    this.setState({ students });
+    const livingStudents = studentData.livingStudents();
+    const deadStudents = studentData.dearlyBeloved();
+    this.setState({ deadStudents, livingStudents });
   }
 
   render() {
