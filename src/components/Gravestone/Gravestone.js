@@ -4,7 +4,7 @@ import studentShape from '../../helpers/props/studentShape';
 
 class Gravestone extends React.Component {
   static propTypes = {
-    students: studentShape.studentShape,
+    deadStudents: studentShape.studentShape,
   }
 
   render() {

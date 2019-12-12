@@ -4,8 +4,9 @@ import studentShape from '../../helpers/props/studentShape';
 
 class LiveStudent extends React.Component {
   static propTypes = {
-    students: studentShape.studentShape,
+    livingStudents: studentShape.studentShape,
   }
+
 
   render() {
     const { liveStudent } = this.props;
