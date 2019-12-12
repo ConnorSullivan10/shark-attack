@@ -1,7 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import studentData from '../helpers/data/studentsData';
 import './App.scss';
+import studentData from '../helpers/data/studentsData';
+import SharkTank from '../components/SharkTank/SharkTank';
+import Graveyard from '../components/Graveyard/Graveyard';
 
 class App extends React.Component {
   state = {
@@ -25,9 +27,10 @@ class App extends React.Component {
     this.setState({ deadStudents });
   }
 
-  studentKiller = (studentId) => {
-    studentData.followTheLight(studentId);
+  sharkAttack = (studentId) => {
     const livingStudents = studentData.livingStudents();
+    const randStudent = livingStudents[Math.floor(Math.random() * livingStudents.length)];
+    studentData.followTheLight(randStudent);
     const deadStudents = studentData.dearlyBeloved();
     this.setState({ deadStudents, livingStudents });
   }
@@ -36,6 +39,8 @@ class App extends React.Component {
     return (
       <div className="App">
           <button className="btn btn-success">Sharks on sharks</button>
+          <SharkTank livingStudents={this.state.livingStudents}/>
+          <Graveyard deadStudents={this.state.deadStudents}/>
       </div>
     );
   }
