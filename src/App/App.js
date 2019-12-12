@@ -30,9 +30,19 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <button className="btn btn-success">Sharks on sharks</button>
-          <SharkTank livingStudents={this.state.livingStudents} sharkAttack={this.sharkAttack}/>
-          <Graveyard deadStudents={this.state.deadStudents} />
+        <container>
+          <div className="row">
+            <div className="col-2"></div>
+            <div className="col-3">
+              <SharkTank className="parent-component" livingStudents={this.state.livingStudents} sharkAttack={this.sharkAttack}/>
+            </div>
+            <div className="col-2"></div>
+            <div className="col-3">
+              <Graveyard className="parent-component" deadStudents={this.state.deadStudents} />
+            </div>
+          </div>
+          <div className="col-2"></div>
+        </container>
       </div>
     );
   }
