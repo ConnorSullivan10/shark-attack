@@ -17,16 +17,6 @@ class App extends React.Component {
     this.setState({ deadStudents, livingStudents });
   }
 
-  aliveStudent = () => {
-    const livingStudents = studentData.livingStudents();
-    this.setState({ livingStudents });
-  }
-
-  deadStudent = () => {
-    const deadStudents = studentData.dearlyBeloved();
-    this.setState({ deadStudents });
-  }
-
   sharkAttack = (studentId) => {
     const livingStudents = studentData.livingStudents();
     const randStudent = livingStudents[Math.floor(Math.random() * livingStudents.length)];
@@ -40,7 +30,7 @@ class App extends React.Component {
       <div className="App">
           <button className="btn btn-success">Sharks on sharks</button>
           <SharkTank livingStudents={this.state.livingStudents}/>
-          <Graveyard deadStudents={this.state.deadStudents}/>
+          <Graveyard deadStudents={this.state.deadStudents} sharkAttack={this.sharkAttack}/>
       </div>
     );
   }
