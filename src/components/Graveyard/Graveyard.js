@@ -5,13 +5,13 @@ import studentShape from '../../helpers/props/studentShape';
 
 class Graveyard extends React.Component {
   static propTypes = {
-    gravestones: PropTypes.arrayOf(studentShape.studentShape),
+    deadStudents: PropTypes.arrayOf(studentShape.studentShape),
   }
 
 
   render() {
-    const myGravestones = this.props.gravestones;
-    const gravestoneCards = myGravestones.map((student) => <Gravestone key={student.id} student={student}/>);
+    const myGravestones = this.props.deadStudents;
+    const gravestoneCards = myGravestones.map((gravestone) => <Gravestone key={gravestone.id} gravestone={gravestone}/>);
     return (
       <div className="graveyard">
         {gravestoneCards}

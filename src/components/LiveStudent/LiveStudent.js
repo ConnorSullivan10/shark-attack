@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import studentShape from '../../helpers/props/studentShape';
 
 class LiveStudent extends React.Component {
   static propTypes = {
-    students: studentShape.studentShape,
-    livingStudent: PropTypes.func,
+    livingStudents: studentShape.studentShape,
   }
 
 
