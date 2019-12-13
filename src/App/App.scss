@@ -37,6 +37,7 @@
       margin-top: 5px;
       margin-right: 0;
       margin-left: auto;
+      z-index: 1;
     }
   }
 
@@ -46,11 +47,6 @@
     background-color: rgba(255,0,0,0.5);
     box-shadow: 0 0 10px 10px rgba(129, 165, 189, 0.473) inset;
     border: none;
-    // opacity: 0.5;
-    // background-image: url(https://i.ytimg.com/vi/MgLbxqK_lOM/maxresdefault.jpg);
-    // background-position: center center;
-    // background-repeat: repeat-x;
-    // background-size: cover;
   }
 
   .surf-container{
@@ -62,8 +58,12 @@
 
       .surfText {
         position: absolute;
-        top: 47%;
-        left: 90px;
+        top: 49%;
+        left: 40px;
+        background: url(https://ak5.picdn.net/shutterstock/videos/1009783205/thumb/1.jpg) no-repeat;
+       -webkit-background-clip: text;
+       background-clip: text;
+       -webkit-text-fill-color: transparent;
       }
     
       #surfboard {
@@ -74,6 +74,7 @@
         -ms-transform: rotate(90deg); /* IE 9 */
         -webkit-transform: rotate(90deg); /* Safari 3-8 */
         transform: rotate(90deg);
+        *{pointer-events: none;}
       }
   }
 }
