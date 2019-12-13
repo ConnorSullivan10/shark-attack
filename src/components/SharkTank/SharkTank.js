@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LiveStudent from '../LiveStudent/LiveStudent';
 import studentShape from '../../helpers/props/studentShape';
+import studentData from '../../helpers/data/studentsData';
 
 class SharkTank extends React.Component {
   static propTypes = {
@@ -10,9 +11,12 @@ class SharkTank extends React.Component {
   }
 
   sharkAttackEvent = (e) => {
-    const { sharkAttack } = this.props;
-    e.preventDefault();
-    sharkAttack();
+    const students = studentData.livingStudents();
+    if (students.length > 0) {
+      const { sharkAttack } = this.props;
+      e.preventDefault();
+      sharkAttack();
+    }
   }
 
   render() {
@@ -20,8 +24,11 @@ class SharkTank extends React.Component {
     const liveStudentCards = myLiveStudents.map((liveStudent) => <LiveStudent key={liveStudent.id} liveStudent={liveStudent}/>);
     return (
       <div className="sharkTank">
-        <button className="btn btn-danger" onClick={this.sharkAttackEvent}>SHARK ATTACK</button>
-        {liveStudentCards}
+        <h1 className="text-center">Shark Tank</h1>
+        <button className="btn btn-danger text-center" onClick={this.sharkAttackEvent}>SHARK ATTACK</button>
+        <div className="card sharkTank-section d-flex flex-wrap">
+          {liveStudentCards}
+        </div>
       </div>
     );
   }
