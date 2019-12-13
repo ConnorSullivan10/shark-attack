@@ -9,30 +9,54 @@
 .container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 1200px;
 }
 
 .sharkTank {
   width: 500px;
+
+  .sharkHeader{
+    display: flex;
+
+    .sharkTitle {
+      margin-bottom: 23px;
+      color: white;
+      background: url(https://ak5.picdn.net/shutterstock/videos/1009783205/thumb/1.jpg) no-repeat;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+    }
+    .shark-button {
+      background: url(https://ak5.picdn.net/shutterstock/videos/1009783205/thumb/1.jpg) no-repeat;
+      height: 60%;
+      color: white;
+      font-weight: bold;
+      margin-top: 5px;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
 }
 
 .graveyard {
   width: 500px;
+
+
+  .grave-header {
+    margin-bottom: 15px;
+    
+    .graveTitle {
+      color: white;
+      background: url(https://miro.medium.com/max/2625/1*d8DyNLUIa8xo5rGrO-2FSg.jpeg) no-repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+     #skull {
+      font-size: xx-large;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
 }
 
-.graveTitle {
-  margin-bottom: 23px;
-  color: white;
-  background: url(https://miro.medium.com/max/2625/1*d8DyNLUIa8xo5rGrO-2FSg.jpeg) no-repeat;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-}
 
-.sharkTitle {
-  margin-bottom: 23px;
-  color: white;
-  background: url(https://ak5.picdn.net/shutterstock/videos/1009783205/thumb/1.jpg) no-repeat;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-}

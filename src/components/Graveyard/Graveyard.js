@@ -14,8 +14,10 @@ class Graveyard extends React.Component {
     const gravestoneCards = myGravestones.map((gravestone) => <Gravestone key={gravestone.id} gravestone={gravestone}/>);
     return (
       <div className="graveyard">
-        <h1 className="text-center graveTitle">Graveyard</h1>
-        <br></br>
+        <div className="grave-header d-flex">
+          <h1 className="text-center graveTitle">Graveyard</h1>
+          <span id="skull" role="img" aria-label="skull">☠️</span>
+        </div>
         <div className="card gravestone-section d-flex flex-wrap">
           {gravestoneCards}
         </div>
