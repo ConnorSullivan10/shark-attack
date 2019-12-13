@@ -1,3 +1,38 @@
 .App {
   text-align: center;
+  background-image: url(https://wallpaperaccess.com/full/914867.jpg);
+  background-position: center center;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 1200px;
+}
+
+.sharkTank {
+  width: 500px;
+}
+
+.graveyard {
+  width: 500px;
+}
+
+.graveTitle {
+  margin-bottom: 23px;
+  color: white;
+  background: url(https://miro.medium.com/max/2625/1*d8DyNLUIa8xo5rGrO-2FSg.jpeg) no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.sharkTitle {
+  margin-bottom: 23px;
+  color: white;
+  background: url(https://ak5.picdn.net/shutterstock/videos/1009783205/thumb/1.jpg) no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
