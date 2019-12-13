@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="container">
+        <div className="app-container">
               <SharkTank className="parent-component sharkTank" livingStudents={this.state.livingStudents} sharkAttack={this.sharkAttack}/>
               <Graveyard className="parent-component graveYard" deadStudents={this.state.deadStudents} />
         </div>

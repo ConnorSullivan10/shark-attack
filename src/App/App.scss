@@ -6,15 +6,17 @@
   background-size: cover;
 }
 
-.container {
+.app-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  width: 1200px;
+  justify-content: space-evenly;
+  max-width: 2000px;
 }
 
 .sharkTank {
-  width: 500px;
+  width: 750px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
   .sharkHeader{
     display: flex;
@@ -24,6 +26,7 @@
       color: white;
       background: url(https://ak5.picdn.net/shutterstock/videos/1009783205/thumb/1.jpg) no-repeat;
        -webkit-background-clip: text;
+       background-clip: text;
        -webkit-text-fill-color: transparent;
     }
     .shark-button {
@@ -36,11 +39,49 @@
       margin-left: auto;
     }
   }
+
+  .sharkTank-section {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgba(255,0,0,0.5);
+    box-shadow: 0 0 10px 10px rgba(129, 165, 189, 0.473) inset;
+    border: none;
+    // opacity: 0.5;
+    // background-image: url(https://i.ytimg.com/vi/MgLbxqK_lOM/maxresdefault.jpg);
+    // background-position: center center;
+    // background-repeat: repeat-x;
+    // background-size: cover;
+  }
+
+  .surf-container{
+    position: relative;
+    color: red;
+    width: 50%;
+    max-width: 375px;
+    height: 150px;
+
+      .surfText {
+        position: absolute;
+        top: 47%;
+        left: 90px;
+      }
+    
+      #surfboard {
+        position: relative;
+        bottom: 100px;
+        width: 100%;
+        overflow: hidden;
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Safari 3-8 */
+        transform: rotate(90deg);
+      }
+  }
 }
 
 .graveyard {
-  width: 500px;
-
+  width: 750px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
   .grave-header {
     margin-bottom: 15px;
@@ -49,8 +90,10 @@
       color: white;
       background: url(https://miro.medium.com/max/2625/1*d8DyNLUIa8xo5rGrO-2FSg.jpeg) no-repeat;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
      #skull {
       font-size: xx-large;
       margin-right: 0;
@@ -58,5 +101,6 @@
     }
   }
 }
+
 
 
