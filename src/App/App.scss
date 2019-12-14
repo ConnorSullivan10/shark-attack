@@ -9,12 +9,12 @@
 .app-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   max-width: 2000px;
 }
 
 .sharkTank {
-  width: 750px;
+  width: 500px;
   margin-top: 50px;
   margin-bottom: 50px;
 
@@ -53,13 +53,14 @@
     position: relative;
     color: red;
     width: 50%;
-    max-width: 375px;
+    max-width: 240px;
     height: 150px;
+    padding: 5px;
 
       .surfText {
         position: absolute;
-        top: 49%;
-        left: 40px;
+        top: 56px;
+        left: 20px;
         background: url(https://ak5.picdn.net/shutterstock/videos/1009783205/thumb/1.jpg) no-repeat;
        -webkit-background-clip: text;
        background-clip: text;
@@ -68,8 +69,9 @@
     
       #surfboard {
         position: relative;
-        bottom: 100px;
+        bottom: 50px;
         width: 100%;
+        margin-left: 11px;
         overflow: hidden;
         -ms-transform: rotate(90deg); /* IE 9 */
         -webkit-transform: rotate(90deg); /* Safari 3-8 */
@@ -80,7 +82,7 @@
 }
 
 .graveyard {
-  width: 750px;
+  width: 500px;
   margin-top: 50px;
   margin-bottom: 50px;
 
