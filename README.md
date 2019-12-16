@@ -11,7 +11,7 @@ Use this application to randomly make shark bait out of the Devs in cohort E10 o
 
 ## Screenshots
 
-![Shark Attack Preview]()
+![Shark Attack Preview](https://raw.githubusercontent.com/ConnorSullivan10/shark-attack/master/screenshots/sharkAttack%20screenshot.PNG)
 
 
 ## How to run
