@@ -1,3 +1,25 @@
+
+# Shark Attack
+
+## Technologies Used
+1. HTML5, SCSS, JavaScript
+2. Bootstrap & SASS 0.5.0: All customized styling
+3. React: For bundling components and building the UI
+
+## Description
+Use this application to randomly make shark bait out of the Devs in cohort E10 of Nashville Software School. Simply click the SHARK ATTACK button to see who's shark bait next!
+
+## Screenshots
+
+![Shark Attack Preview]()
+
+
+## How to run
+1. Clone down this project.
+2. Go to: `https://www.npmjs.com/package/http-server` and install "http-server".  
+2. Navigate to the project folder in command line interface and type: `http-server -p 8888`  
+3. This will show at: `http://localhost:8888` in your internet browser.  
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

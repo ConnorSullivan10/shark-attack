@@ -11,11 +11,10 @@ class LiveStudent extends React.Component {
   render() {
     const { liveStudent } = this.props;
     return (
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">{liveStudent.firstName} {liveStudent.lastName}</h5>
+        <div className="card-body surf-container">
+          <img id="surfboard" src="https://dejpknyizje2n.cloudfront.net/svgcustom/clipart/preview/surfboard-with-shark-bite-6258-15340-550x550.png" alt="surfboard"/>
+          <h5 className="card-title surfText">{liveStudent.firstName} {liveStudent.lastName}</h5>
         </div>
-      </div>
     );
   }
 }
