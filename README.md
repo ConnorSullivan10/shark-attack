@@ -20,6 +20,9 @@ Use this application to randomly make shark bait out of the Devs in cohort E10 o
 2. Navigate to the project folder in command line interface and type: `http-server -p 8888`  
 3. This will show at: `http://localhost:8888` in your internet browser.  
 
+Or you can open your web browser and navigate to the deployed project link:
+https://shark-attack-ca1d1.firebaseapp.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
